@@ -2,7 +2,7 @@ var express = require('express'),
   app       = express(),
   path      = require('path'),
   morgan    = require('morgan'),      // Easily log reqs
-  port      = 5757;
+  config    = require('./config');
 
 // Log reqs
 app.use(morgan('dev'));
@@ -22,5 +22,5 @@ app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/app/index.html'))
 });
 
-app.listen(port);
-console.log('Server is running on: ' + port);
+app.listen(config.port);
+console.log('Server is running on: ' + config.port);
