@@ -1,7 +1,4 @@
-$dark-orange: #FF5B00;
-$light-orange: #FCB040;
-$ticket-red: #E78B8E;
-$visor-green: #00C000;
+@import "public/assets/scss/flatly/_variable_overrides.scss";
 
 /* ==========================================================================
    Bootstrap Overwrites
@@ -25,15 +22,8 @@ h2 {
   }
 }
 
-.btn-primary {
-  background-color: $dark-orange;
-  border-color: $dark-orange;
-  color: white;
-}
-
-a.btn-primary:hover, a.btn-primary:focus, a.btn-primary:active {
-  background-color: $light-orange;
-  border-color: $light-orange;
+.form-control {
+  border: 2px solid $brand-info;
 }
 
 
@@ -42,19 +32,19 @@ a.btn-primary:hover, a.btn-primary:focus, a.btn-primary:active {
    ========================================================================== */
 
 .dark-orange {
-  color: $dark-orange;
+  color: $brand-primary;
 }
 
 .light-orange {
-  color: $light-orange;
+  color: $brand-info;
 }
 
 .ticket-red {
-  color: $ticket-red;
+  color: $brand-danger;
 }
 
 .visor-green {
-  color: $visor-green;
+  color: $brand-success;
 }
 
 /* ==========================================================================
@@ -77,9 +67,7 @@ a.btn-primary:hover, a.btn-primary:focus, a.btn-primary:active {
   }
 }
 
-#first-cta {
+#submit-email {
   margin-top: 8vh;
-  padding: 20px 30px;
-  font-size: 30px;
   margin-bottom: 30px;
 }

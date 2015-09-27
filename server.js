@@ -1,10 +1,16 @@
 var express = require('express'),
   app       = express(),
   path      = require('path'),
+  bodyParser = require('body-parser'),
   morgan    = require('morgan'),      // Easily log reqs
-  config    = require('./config');
+  config    = require('./config'),
+  mailerRoutes;
 
-// Log reqs
+// Necessary for parsing the body of POST reqs
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Needed to easily log requests
 app.use(morgan('dev'));
       
 app.set('views', path.join(__dirname, 'views'));
@@ -15,9 +21,13 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
+mailerRoutes = require('./app/mailers/mailer.routes.js')(app, express);
+app.use('/email', mailerRoutes);
+
+
 // CATCH-ALL ROUTE ----------------------
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname + '/public/app/index.html'))
+  res.render('index');
 });
 
 app.listen(config.port);
