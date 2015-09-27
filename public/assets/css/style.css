@@ -12,14 +12,8 @@ h2 {
   h2 {
     font-size: 4.1vw; } }
 
-.btn-primary {
-  background-color: #FF5B00;
-  border-color: #FF5B00;
-  color: white; }
-
-a.btn-primary:hover, a.btn-primary:focus, a.btn-primary:active {
-  background-color: #FCB040;
-  border-color: #FCB040; }
+.form-control {
+  border: 2px solid #FCB040; }
 
 /* ==========================================================================
    Theme colors
@@ -50,8 +44,6 @@ a.btn-primary:hover, a.btn-primary:focus, a.btn-primary:active {
   #logo {
     margin-top: 6vh; } }
 
-#first-cta {
+#submit-email {
   margin-top: 8vh;
-  padding: 20px 30px;
-  font-size: 30px;
   margin-bottom: 30px; }

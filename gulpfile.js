@@ -6,7 +6,7 @@ var gulp  = require('gulp'),
   rename  = require('gulp-rename');
 
 gulp.task('lint', function lint() {
-  return gulp.src('./public/js/*.js')
+  return gulp.src('./public/assets/js/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
@@ -18,16 +18,16 @@ gulp.task('sass', function compileSass() {
 });
 
 gulp.task('scripts', function concatenateAndMinifyJS() {
-  return gulp.src('./public/js/*.js')
+  return gulp.src('./public/assets/js/*.js')
     .pipe(concat('all.js'))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('./public'))
     .pipe(rename('all.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('./public'));
 });
 
 gulp.task('watch', function watchForChanges() {
-  gulp.watch('js/*.js', ['lint', 'scripts']);
+  gulp.watch('./public/assets/js/*.js', ['lint', 'scripts']);
   gulp.watch('./public/assets/scss/*.scss', ['sass']);
 });
 
