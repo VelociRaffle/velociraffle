@@ -22,14 +22,14 @@
       //////////////////////////////////////////////////////////////////////////
       function clearMessageBox() {
         errorMessageBox
-          .removeClass('ticket-red')
-          .removeClass('visor-green')
+          .removeClass('text-danger')
+          .removeClass('text-success')
           .text('');
       }
 
       function showBlankEmailError() {
         errorMessageBox
-          .addClass('ticket-red')
+          .addClass('text-danger')
           .text('Email cannot be blank.');
       }
 
@@ -51,7 +51,7 @@
 
       function showSuccess(data) {
         errorMessageBox
-          .addClass('visor-green')
+          .addClass('text-success')
           .text('Successfully added ' + emailAddress + ' to the email list!');
       }
     });
