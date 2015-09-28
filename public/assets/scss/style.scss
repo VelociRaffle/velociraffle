@@ -1,6 +1,26 @@
 @import "public/assets/scss/flatly/_variable_overrides.scss";
 
 /* ==========================================================================
+   Home page variables
+   ========================================================================== */
+
+$section-padding: 8vh;
+$testimonial-photo-length: 60px;
+$testimonial-border-radius: 30px;
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+  overflow-x: hidden;
+}
+
+.black {
+  color: black;
+}
+
+/* ==========================================================================
    Bootstrap Overwrites
    ========================================================================== */
 
@@ -30,13 +50,17 @@ h2 {
    Above the fold
    ========================================================================== */
 
+#above-the-fold {
+  margin-bottom: 5vw;
+}
+
 #logo {
   max-width: 100%;
 }
 
 @media (min-width: 768px) {
   #logo {
-    margin-top: 8vh;
+    margin-top: $section-padding;
   }
 }
 
@@ -47,6 +71,135 @@ h2 {
 }
 
 #submit-email {
-  margin-top: 8vh;
+  margin-top: $section-padding;
   margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   Testimonials
+   ========================================================================== */
+
+#testimonials {
+  background-color: $brand-primary;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+
+  h2 {
+    color: white;
+  }
+}
+
+.testimonial {
+  h3 {
+    color: white;
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    top: 5px;
+  }
+
+  p {
+    margin-top: 20px;
+    color: white;
+    & + p {
+      margin-top: 0px;
+      margin-bottom: 30px;
+    }
+  }
+  
+}
+
+.testimonial-photo {
+  height: $testimonial-photo-length;
+  width: $testimonial-photo-length;
+  border-radius: $testimonial-border-radius;
+  -webkit-border-radius: $testimonial-border-radius;
+  -moz-border-radius: $testimonial-border-radius;
+}
+
+/* ==========================================================================
+   Donations
+   ========================================================================== */
+
+#donations {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+
+  h2 {
+    font-size: 6.5vw;
+    color: $brand-success;
+    font-style: italic;
+  }
+
+  p {
+    color: $brand-danger;
+    font-size: 20px;
+  }
+
+  img {
+    max-height: 100px;
+
+    & + img {
+      margin-left: 20px;
+    }
+  }
+
+  #charities {
+    margin-top: 10vh;
+    margin-bottom: 15px;
+    font-size: 4.0vw;
+    margin-bottom: 0px;
+    font-style: normal;
+
+    & + p {
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+  }
+}
+
+/* ==========================================================================
+   Prizes
+   ========================================================================== */
+
+#prizes {
+  background-color: $brand-info;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+
+  h2 {
+    color: white;
+    margin-bottom: 0px;
+
+    & + p {
+      margin-bottom: 4vh;
+      color: white;
+    }
+  }
+
+  .well {
+    background-color: white;
+  }
+
+  img {
+    max-height: 150px;
+  }
+
+  p {
+    font-size: 20px;
+    color: black;
+  }
+}
+
+/* ==========================================================================
+   Second call-to-action
+   ========================================================================== */
+
+#second-cta {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+}
+
+#submit-email-2 {
+  margin-top: $section-padding;
 }
