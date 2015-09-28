@@ -1,59 +1,72 @@
 (function() {
   'use strict';
 
+  var firstCTAdata = {
+    emailInput: $('#email-input'),
+    messageBox: $('#message-box')
+  },
+    secondCTAdata = {
+      emailInput: $('#email-input-2'),
+      messageBox: $('#message-box-2')
+    };
+
   $('#submit-email')
-    .submit(function submitForm(e) {
-      var emailAddress = $('#email-input').val(),
-        errorMessageBox = $('#message-box');
+    .submit(submitEmailForm.bind(firstCTAdata));
 
-      e.preventDefault();
+  $('#submit-email-2')
+    .submit(submitEmailForm.bind(secondCTAdata));
 
-      clearMessageBox();
+  function submitEmailForm(e) {
+    var emailAddress = this.emailInput.val(),
+      errorMessageBox = this.messageBox;
 
-      if (!emailAddress) {
-        showBlankEmailError();
-      }
-      else {
-        showSendingMessage();
-        submitEmailAddress();
-      }
+    e.preventDefault();
+
+    clearMessageBox();
+
+    if (!emailAddress) {
+      showBlankEmailError();
+    }
+    else {
+      showSendingMessage();
+      submitEmailAddress();
+    }
 
 
-      //////////////////////////////////////////////////////////////////////////
-      function clearMessageBox() {
-        errorMessageBox
-          .removeClass('text-danger')
-          .removeClass('text-success')
-          .text('');
-      }
+    //////////////////////////////////////////////////////////////////////////
+    function clearMessageBox() {
+      errorMessageBox
+        .removeClass('text-danger')
+        .removeClass('text-success')
+        .text('');
+    }
 
-      function showBlankEmailError() {
-        errorMessageBox
-          .addClass('text-danger')
-          .text('Email cannot be blank.');
-      }
+    function showBlankEmailError() {
+      errorMessageBox
+        .addClass('text-danger')
+        .text('Email cannot be blank.');
+    }
 
-      function showSendingMessage() {
-        errorMessageBox
-          .text('Adding ' + emailAddress + ' to the e-mail list...');
-      }
+    function showSendingMessage() {
+      errorMessageBox
+        .text('Adding ' + emailAddress + ' to the e-mail list...');
+    }
 
-      function submitEmailAddress() {
-        $.ajax({
-          type: 'POST',
-          url: '/email/new-signup',
-          data: {
-            email: emailAddress
-          },
-          success: showSuccess
-        });
-      }
+    function submitEmailAddress() {
+      $.ajax({
+        type: 'POST',
+        url: '/email/new-signup',
+        data: {
+          email: emailAddress
+        },
+        success: showSuccess
+      });
+    }
 
-      function showSuccess(data) {
-        errorMessageBox
-          .addClass('text-success')
-          .text('Successfully added ' + emailAddress + ' to the email list!');
-      }
-    });
-
+    function showSuccess(data) {
+      errorMessageBox
+        .addClass('text-success')
+        .text('Successfully added ' + emailAddress + ' to the email list!');
+    }
+  }
 })();
