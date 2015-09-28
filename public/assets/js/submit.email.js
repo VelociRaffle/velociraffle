@@ -8,6 +8,8 @@
 
       e.preventDefault();
 
+      clearMessageBox();
+
       if (!emailAddress) {
         showBlankEmailError();
       }
@@ -20,7 +22,8 @@
       //////////////////////////////////////////////////////////////////////////
       function clearMessageBox() {
         errorMessageBox
-          .removeClass('ticket-red visor-green')
+          .removeClass('ticket-red')
+          .removeClass('visor-green')
           .text('');
       }
 
