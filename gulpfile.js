@@ -4,7 +4,8 @@ var gulp  = require('gulp'),
   concat  = require('gulp-concat'),
   uglify  = require('gulp-uglify'),
   rename  = require('gulp-rename'),
-  assetsPath = './public/assets';
+  assetsPath = './client/assets',
+  publicPath = './client/public';
 
 gulp.task('lint', function lint() {
   return gulp.src(assetsPath + '/js/*.js')
@@ -15,16 +16,16 @@ gulp.task('lint', function lint() {
 gulp.task('sass', function compileSass() {
   return gulp.src([assetsPath + '/scss/*/*.scss', assetsPath + '/scss/*.scss'])
     .pipe(sass())
-    .pipe(gulp.dest('./public/assets/css'));
+    .pipe(gulp.dest(publicPath + '/css'));
 });
 
 gulp.task('scripts', function concatenateAndMinifyJS() {
   return gulp.src(assetsPath + '/js/*.js')
     .pipe(concat('all.js'))
-    .pipe(gulp.dest('./public'))
+    .pipe(gulp.dest(publicPath + '/js'))
     .pipe(rename('all.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest(publicPath + '/js'));
 });
 
 gulp.task('watch', function watchForChanges() {
