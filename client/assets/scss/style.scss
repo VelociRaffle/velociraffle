@@ -20,6 +20,19 @@ body {
   color: black;
 }
 
+.strong {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+
 /* ==========================================================================
    Bootstrap Overwrites
    ========================================================================== */
@@ -73,6 +86,10 @@ h2 {
 #submit-email {
   margin-top: $section-padding;
   margin-bottom: 30px;
+}
+
+#first-cta {
+  margin-top: 6vh;
 }
 
 /* ==========================================================================
@@ -196,8 +213,8 @@ h2 {
    ========================================================================== */
 
 #second-cta {
-  padding-top: $section-padding;
-  padding-bottom: $section-padding;
+  margin-top: 6vh;
+  margin-bottom: 3vh;
 }
 
 #submit-email-2 {
