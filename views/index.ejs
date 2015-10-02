@@ -10,13 +10,13 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid text-center">
     <div id="above-the-fold" class="row">
       <div class="col-sm-6">
         <img id="logo" src="/img/logo.png">
       </div>
 
-      <div class="col-lg-6 col-lg-offset-0 col-sm-5 col-sm-offset-1 text-center">
+      <div class="col-lg-6 col-lg-offset-0 col-sm-5 col-sm-offset-1">
         <h1 class="hidden-xs">
           <span class="text-primary">Veloci</span><span class="text-info">Raffle</span>
         </h1>
@@ -25,21 +25,14 @@
           <p class="text-success">Win sweet stuff.</p>
         </h2>
 
-        <form id="submit-email" action="/email" method="post">
-          <div class="col-md-8">
-            <input id="email-input" class="form-control" type="text" name="email" placeholder="Enter email address to..." />
-            <p id="message-box"></p>
-          </div>
-
-          <div class="col-md-4">
-            <input class="btn btn-primary" type="submit" value="Get VelociRowdy">
-          </div>
-        </form>
+        <a id="first-cta" href="http://eepurl.com/bBa-Jr" target="_blank" class="btn btn-primary btn-lg">
+          Get VelociRowdy
+        </a>
       </div>
     </div>
 
     <!--
-    <div id="testimonials" class="row text-center">
+    <div id="testimonials" class="row">
       <div class="col-lg-5 col-lg-offset-1 testimonial">
         <img class="testimonial-photo" src="/img/gp.png" />
         <h3>Gerry Pass</h3>
@@ -56,7 +49,7 @@
   </div>
   -->
 
-  <div id="donations" class="row text-center">
+  <div id="donations" class="row">
     <div class="col-lg-5 col-lg-offset-1">
       <h2>100%</h2>
       <p>...of profits donated.</p>
@@ -67,7 +60,7 @@
       <p>...average donation per raffle.</p> 
     </div>
 
-    <div class="col-lg-12 text-center">
+    <div class="col-lg-12">
       <h2 id="charities">Charities</h2>
       <p>(so far)</p>
       <p>
@@ -86,7 +79,7 @@
     </div>
   </div>
 
-  <div id="prizes" class="row text-center">
+  <div id="prizes" class="row">
     <div class="col-lg-12">
       <h2>Prizes</h2>
       <p>(so far)</p>
@@ -120,32 +113,19 @@
     </div>
   </div>
 
-  <div id="second-cta" class="row">
-    <div class="col-md-12 text-center">
+  <div id="second-cta-section" class="row">
+    <div class="col-md-12">
       <h2>
         <p class="text-danger">I love giving to charity.</p>
         <p class="text-success">I love winning sweet stuff.</p>
         <p class="black">I want in on the next one.</p>
       </h2>
 
-
-      <div class="col-md-8 col-md-offset-2 col-sm-12">
-        <form id="submit-email-2" action="/email" method="post">
-          <div class="col-md-8 col-sm-8">
-            <input id="email-input-2" class="form-control" type="text" name="email" placeholder="Enter email address to..." />
-            <p id="message-box-2"></p>
-          </div>
-
-          <div class="col-md-4 col-sm-4">
-            <input class="btn btn-primary" type="submit" value="Get in on the VelociRaffle">
-          </div>
-        </form>
-      </div>
+      <a id="second-cta" href="http://eepurl.com/bBa-Jr" target="_blank" class="btn btn-primary btn-lg">
+        Get in on the next VelociRaffle
+      </a>
     </div>
   </div>
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script type="text/javascript" src="/js/all.js"></script>
 </body>
 
 </html>

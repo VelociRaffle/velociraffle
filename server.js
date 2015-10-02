@@ -21,10 +21,6 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
-app.get('/new-home', function(req, res) {
-  res.render('new-home');
-});
-
 app.get('/new-subscriber', function(req, res) {
   res.render('new-subscriber');
 });

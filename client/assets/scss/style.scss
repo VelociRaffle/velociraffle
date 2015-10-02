@@ -83,11 +83,6 @@ h2 {
   }
 }
 
-#submit-email {
-  margin-top: $section-padding;
-  margin-bottom: 30px;
-}
-
 #first-cta {
   margin-top: 6vh;
 }
@@ -212,11 +207,11 @@ h2 {
    Second call-to-action
    ========================================================================== */
 
+#second-cta-section {
+  padding-top: $section-padding;
+}
+
 #second-cta {
   margin-top: 6vh;
   margin-bottom: 3vh;
-}
-
-#submit-email-2 {
-  margin-top: $section-padding;
 }
