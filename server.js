@@ -19,7 +19,8 @@ app.use(express.static(__dirname + '/client/public'));
 
 app.get('/', function(req, res) {
   res.render('static_pages/home/home', {
-    title: ''
+    title: '',
+    env: process.env.NODE_ENV
   });
 });
 
