@@ -90,29 +90,45 @@ h2 {
 /* ==========================================================================
    Donations
    ========================================================================== */
-#donations {
-  padding-top: 8vh;
-  padding-bottom: 8vh; }
-  #donations h2 {
-    font-size: 6.5vw;
-    color: #00C000;
-    font-style: italic; }
-  #donations p {
-    color: #E78B8E;
-    font-size: 20px; }
-  #donations img {
-    max-height: 100px; }
-    #donations img + img {
-      margin-left: 20px; }
-  #donations #charities {
-    margin-top: 10vh;
-    margin-bottom: 15px;
-    font-size: 4.0vw;
-    margin-bottom: 0px;
-    font-style: normal; }
-    #donations #charities + p {
+#donations h2 {
+  font-size: 13vw;
+  color: #00C000;
+  font-style: italic; }
+
+#donations p {
+  color: #E78B8E;
+  font-size: 20px; }
+
+#donations img {
+  max-height: 100px; }
+  #donations img + img {
+    margin-left: 20px; }
+
+@media (min-width: 768px) {
+  #donations {
+    padding-top: 8vh;
+    padding-bottom: 8vh; }
+    #donations h2 {
+      font-size: 6.5vw;
+      color: #00C000;
+      font-style: italic; }
+    #donations p {
+      color: #E78B8E;
+      font-size: 20px; }
+    #donations img {
+      max-height: 100px; }
+      #donations img + img {
+        margin-left: 20px; }
+    #donations #charities-section {
+      margin-top: 5vw; }
+    #donations #charities {
       margin-bottom: 15px;
-      font-size: 15px; }
+      font-size: 4.0vw;
+      margin-bottom: 0px;
+      font-style: normal; }
+      #donations #charities + p {
+        margin-bottom: 15px;
+        font-size: 15px; } }
 
 /* ==========================================================================
    Prizes
@@ -130,10 +146,14 @@ h2 {
   #prizes .well {
     background-color: white; }
   #prizes img {
-    max-height: 150px; }
+    max-height: 150px;
+    max-width: 100%; }
   #prizes p {
     font-size: 20px;
     color: black; }
+
+.no-right-padding {
+  padding-right: 0px; }
 
 /* ==========================================================================
    Second call-to-action

@@ -134,41 +134,70 @@ h2 {
    ========================================================================== */
 
 #donations {
-  padding-top: $section-padding;
-  padding-bottom: $section-padding;
-
   h2 {
-    font-size: 6.5vw;
-    color: $brand-success;
-    font-style: italic;
+   font-size: 13vw;
+   color: $brand-success;
+   font-style: italic;
   }
 
   p {
-    color: $brand-danger;
-    font-size: 20px;
+   color: $brand-danger;
+   font-size: 20px;
   }
 
   img {
-    max-height: 100px;
+   max-height: 100px;
 
-    & + img {
-      margin-left: 20px;
-    }
+   & + img {
+     margin-left: 20px;
+   }
   }
+}
 
-  #charities {
-    margin-top: 10vh;
-    margin-bottom: 15px;
-    font-size: 4.0vw;
-    margin-bottom: 0px;
-    font-style: normal;
+@media (min-width: 768px) {
+  #donations {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
 
-    & + p {
+    h2 {
+      font-size: 6.5vw;
+      color: $brand-success;
+      font-style: italic;
+    }
+
+    p {
+      color: $brand-danger;
+      font-size: 20px;
+    }
+
+    img {
+      max-height: 100px;
+
+      & + img {
+        margin-left: 20px;
+      }
+    }
+
+    #charities-section {
+      margin-top: 5vw;
+    }
+
+    #charities {
       margin-bottom: 15px;
-      font-size: 15px;
+      font-size: 4.0vw;
+      margin-bottom: 0px;
+      font-style: normal;
+
+      & + p {
+        margin-bottom: 15px;
+        font-size: 15px;
+      }
     }
   }
 }
+
+
+
 
 /* ==========================================================================
    Prizes
@@ -195,12 +224,17 @@ h2 {
 
   img {
     max-height: 150px;
+    max-width: 100%;
   }
 
   p {
     font-size: 20px;
     color: black;
   }
+}
+
+.no-right-padding {
+  padding-right: 0px;
 }
 
 /* ==========================================================================
