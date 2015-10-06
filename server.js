@@ -18,15 +18,21 @@ app.set('view engine', 'ejs'); // use either jade or ejs
 app.use(express.static(__dirname + '/client/public'));
 
 app.get('/', function(req, res) {
-  res.render('index');
+  res.render('static_pages/home/home', {
+    title: ''
+  });
 });
 
 app.get('/new-subscriber', function(req, res) {
-  res.render('new-subscriber');
+  res.render('static_pages/new-subscriber', {
+    title: 'New Subscriber'
+  });
 });
 
 app.get('/thank-you', function(req, res) {
-  res.render('thank-you');
+  res.render('static_pages/thank-you', {
+    title: 'Welcome'
+  });
 });
 
 mailerRoutes = require('./app/mailers/mailer.routes.js')(app, express);
