@@ -1,12 +1,35 @@
 @import "client/assets/scss/flatly/_variable_overrides.scss";
 
 /* ==========================================================================
-   Home page variables
+   Home page variables & Mixins
    ========================================================================== */
 
 $section-padding: 8vh;
 $testimonial-photo-length: 60px;
 $testimonial-border-radius: 30px;
+
+$white: white;
+$black: black;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin breakpoint-sm {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
 
 /* ==========================================================================
    Base
@@ -17,7 +40,7 @@ body {
 }
 
 .black {
-  color: black;
+  color: $black;
 }
 
 .strong {
@@ -41,10 +64,7 @@ h2 {
   font-size: 10.0vw;
 }
 
-@media (min-width: 768px) {
-  .container-fluid {
-    margin-top: 10vh;
-  }
+@include breakpoint-sm {
 
   h1 {
     font-size: 7.1vw;
@@ -59,6 +79,7 @@ h2 {
   border: 2px solid $brand-info;
 }
 
+
 /* ==========================================================================
    Above the fold
    ========================================================================== */
@@ -69,16 +90,11 @@ h2 {
 
 #logo {
   max-width: 100%;
-}
-
-@media (min-width: 768px) {
-  #logo {
+  @include breakpoint-sm {
     margin-top: $section-padding;
   }
-}
 
-@media (min-width: 992px) {
-  #logo {
+  @include breakpoint-md {
     margin-top: 6vh;
   }
 }
@@ -86,6 +102,7 @@ h2 {
 #first-cta {
   margin-top: 6vh;
 }
+
 
 /* ==========================================================================
    Testimonials
@@ -97,13 +114,13 @@ h2 {
   padding-bottom: $section-padding;
 
   h2 {
-    color: white;
+    color: $white;
   }
 }
 
 .testimonial {
   h3 {
-    color: white;
+    color: $white;
     display: inline-block;
     margin-left: 20px;
     position: relative;
@@ -112,22 +129,20 @@ h2 {
 
   p {
     margin-top: 20px;
-    color: white;
+    color: $white;
     & + p {
       margin-top: 0px;
       margin-bottom: 30px;
     }
   }
-  
 }
 
 .testimonial-photo {
   height: $testimonial-photo-length;
   width: $testimonial-photo-length;
-  border-radius: $testimonial-border-radius;
-  -webkit-border-radius: $testimonial-border-radius;
-  -moz-border-radius: $testimonial-border-radius;
+  @include border-radius($testimonial-border-radius);
 }
+
 
 /* ==========================================================================
    Donations
@@ -135,9 +150,13 @@ h2 {
 
 #donations {
   h2 {
-   font-size: 13vw;
-   color: $brand-success;
-   font-style: italic;
+    font-size: 13vw;
+    color: $brand-success;
+    font-style: italic;
+
+    @include breakpoint-sm {
+      font-size: 6.5vw;
+    }
   }
 
   p {
@@ -146,37 +165,16 @@ h2 {
   }
 
   img {
-   max-height: 100px;
+    max-height: 100px;
 
-   & + img {
-     margin-left: 20px;
-   }
+    & + img {
+      margin-left: 20px;
+    }
   }
-}
 
-@media (min-width: 768px) {
-  #donations {
+  @include breakpoint-sm {
     padding-top: $section-padding;
     padding-bottom: $section-padding;
-
-    h2 {
-      font-size: 6.5vw;
-      color: $brand-success;
-      font-style: italic;
-    }
-
-    p {
-      color: $brand-danger;
-      font-size: 20px;
-    }
-
-    img {
-      max-height: 100px;
-
-      & + img {
-        margin-left: 20px;
-      }
-    }
 
     #charities-section {
       margin-top: 5vw;
@@ -197,8 +195,6 @@ h2 {
 }
 
 
-
-
 /* ==========================================================================
    Prizes
    ========================================================================== */
@@ -209,17 +205,24 @@ h2 {
   padding-bottom: $section-padding;
 
   h2 {
-    color: white;
+    color: $white;
     margin-bottom: 0px;
 
     & + p {
       margin-bottom: 4vh;
-      color: white;
+      color: $white;
     }
   }
 
   .well {
-    background-color: white;
+    background-color: $white;
+    @include breakpoint-sm {
+      height: 285px;
+    }
+
+    @include breakpoint-md {
+      height: auto;
+    }
   }
 
   img {
@@ -229,7 +232,7 @@ h2 {
 
   p {
     font-size: 20px;
-    color: black;
+    color: $black;
   }
 }
 

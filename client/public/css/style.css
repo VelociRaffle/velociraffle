@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Home page variables
+   Home page variables & Mixins
    ========================================================================== */
 /* ==========================================================================
    Base
@@ -26,8 +26,6 @@ h2 {
   font-size: 10.0vw; }
 
 @media (min-width: 768px) {
-  .container-fluid {
-    margin-top: 10vh; }
   h1 {
     font-size: 7.1vw; }
   h2 {
@@ -44,14 +42,12 @@ h2 {
 
 #logo {
   max-width: 100%; }
-
-@media (min-width: 768px) {
-  #logo {
-    margin-top: 8vh; } }
-
-@media (min-width: 992px) {
-  #logo {
-    margin-top: 6vh; } }
+  @media (min-width: 768px) {
+    #logo {
+      margin-top: 8vh; } }
+  @media (min-width: 992px) {
+    #logo {
+      margin-top: 6vh; } }
 
 #first-cta {
   margin-top: 6vh; }
@@ -83,9 +79,10 @@ h2 {
 .testimonial-photo {
   height: 60px;
   width: 60px;
-  border-radius: 30px;
   -webkit-border-radius: 30px;
-  -moz-border-radius: 30px; }
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px; }
 
 /* ==========================================================================
    Donations
@@ -94,6 +91,9 @@ h2 {
   font-size: 13vw;
   color: #00C000;
   font-style: italic; }
+  @media (min-width: 768px) {
+    #donations h2 {
+      font-size: 6.5vw; } }
 
 #donations p {
   color: #E78B8E;
@@ -108,17 +108,6 @@ h2 {
   #donations {
     padding-top: 8vh;
     padding-bottom: 8vh; }
-    #donations h2 {
-      font-size: 6.5vw;
-      color: #00C000;
-      font-style: italic; }
-    #donations p {
-      color: #E78B8E;
-      font-size: 20px; }
-    #donations img {
-      max-height: 100px; }
-      #donations img + img {
-        margin-left: 20px; }
     #donations #charities-section {
       margin-top: 5vw; }
     #donations #charities {
@@ -145,6 +134,12 @@ h2 {
       color: white; }
   #prizes .well {
     background-color: white; }
+    @media (min-width: 768px) {
+      #prizes .well {
+        height: 285px; } }
+    @media (min-width: 992px) {
+      #prizes .well {
+        height: auto; } }
   #prizes img {
     max-height: 150px;
     max-width: 100%; }
