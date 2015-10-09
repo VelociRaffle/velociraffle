@@ -248,4 +248,10 @@ h2 {
 #second-cta {
   margin-top: 6vh;
   margin-bottom: 3vh;
+  padding: 10px 15px;
+  font-size: 15px;
+  @include breakpoint-sm {
+    padding: 18px 27px;
+    font-size: 19px;
+  }
 }
