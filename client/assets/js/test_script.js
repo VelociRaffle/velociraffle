@@ -1,1 +1,0 @@
-var superLongVariable = 'a';
