@@ -23,6 +23,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "postinstall": "gulp serve:prod"
+    "build": "gulp serve:prod"
   }
 }
