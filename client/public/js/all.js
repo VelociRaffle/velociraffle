@@ -1,1 +1,1 @@
-var superLongVariable = 'a';
+var superLongVariable = 'abc';
