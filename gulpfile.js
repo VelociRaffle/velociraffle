@@ -19,18 +19,26 @@ gulp.task('sass', function compileSass() {
     .pipe(gulp.dest(publicPath + '/css'));
 });
 
-gulp.task('scripts', function concatenateAndMinifyJS() {
+gulp.task('scripts-dev', function concatenateJS() {
+  return gulp.src(assetsPath + '/js/*.js')
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest(publicPath + '/js'));
+});
+
+gulp.task('scripts-prod', function concatenateAndMinifyJS() {
   return gulp.src(assetsPath + '/js/*.js')
     .pipe(concat('all.js'))
     .pipe(gulp.dest(publicPath + '/js'))
-    .pipe(rename('all.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(publicPath + '/js'));
 });
 
 gulp.task('watch', function watchForChanges() {
-  gulp.watch(assetsPath + '/js/*.js', ['lint', 'scripts']);
+  gulp.watch(assetsPath + '/js/*.js', ['lint', 'scripts-dev']);
   gulp.watch(assetsPath + '/scss/*.scss', ['sass']);
 });
 
-gulp.task('default', ['lint', 'sass', 'scripts', 'watch']);
+gulp.task('default', ['lint', 'sass', 'scripts-dev', 'watch']);
+
+gulp.task('serve', ['lint', 'sass', 'scripts-dev', 'watch']);
+gulp.task('serve:prod', ['sass', 'scripts-prod']);
