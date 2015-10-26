@@ -61,6 +61,10 @@ body {
   text-decoration: underline;
 }
 
+.inline-text-only-logo {
+  height: 30px;
+}
+
 
 /* ==========================================================================
    Bootstrap Overwrites
@@ -164,6 +168,8 @@ h2 {
   p {
     margin-top: 20px;
     color: $white;
+    line-height: 2em;
+
     & + p {
       margin-top: 0px;
       margin-bottom: 30px;

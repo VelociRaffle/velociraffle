@@ -19,6 +19,9 @@ body {
 .underline {
   text-decoration: underline; }
 
+.inline-text-only-logo {
+  height: 30px; }
+
 /* ==========================================================================
    Bootstrap Overwrites
    ========================================================================== */
@@ -89,7 +92,8 @@ h2 {
 
 .testimonial p {
   margin-top: 20px;
-  color: white; }
+  color: white;
+  line-height: 2em; }
   .testimonial p + p {
     margin-top: 0px;
     margin-bottom: 30px; }
