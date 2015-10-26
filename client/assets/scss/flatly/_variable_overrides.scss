@@ -1,10 +1,12 @@
-$dark-orange: #FF5B00;
-$light-orange: #FCB040;
-$ticket-red: #E78B8E;
-$visor-green: #00C000;
+$dark-orange: #FC5C1F;
+$light-orange: #F9AE4C;
+$ticket-blue: #9DCDDE;
+$visor-green: #1CBE20;
+$ticket-dark-blue: #2D6F9A;
+$black: #000000;
 
 $brand-primary:         $dark-orange !default;
 $brand-success:         $visor-green !default;
-$brand-info:            $light-orange !default;
-$brand-warning:         #F39C12 !default;
-$brand-danger:          $ticket-red !default;
+$brand-info:            $ticket-blue !default;
+$brand-warning:         $light-orange !default;
+$brand-danger:          $black !default;

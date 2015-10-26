@@ -30,6 +30,12 @@ $black: black;
   }
 }
 
+@mixin breakpoint-lg {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
 
 /* ==========================================================================
    Base
@@ -86,6 +92,30 @@ h2 {
 
 #above-the-fold {
   margin-bottom: 5vw;
+
+  h1 {
+    display: none;
+  }
+
+  h2 {
+    font-size: 12.5vw;
+
+    @include breakpoint-sm {
+      font-size: 6.5vw;
+    }
+
+    @include breakpoint-md {
+      font-size: 6.6vw; 
+    }
+
+    @include breakpoint-lg {
+      font-size: 6.7vw;
+    }
+
+    &:first-child {
+      margin-top: $section-padding;
+    }
+  }
 }
 
 #logo {
@@ -97,6 +127,10 @@ h2 {
   @include breakpoint-md {
     margin-top: 6vh;
   }
+}
+
+#text-logo {
+  max-width: 100%;
 }
 
 #first-cta {
@@ -155,7 +189,11 @@ h2 {
     font-style: italic;
 
     @include breakpoint-sm {
-      font-size: 6.5vw;
+      font-size: 11.5vw;
+    }
+
+    @include breakpoint-md {
+      font-size: 10.0vw;
     }
   }
 
@@ -183,6 +221,11 @@ h2 {
     #charities {
       margin-bottom: 15px;
       font-size: 4.0vw;
+
+      @include breakpoint-sm {
+        font-size: 9.0vw;
+      }
+
       margin-bottom: 0px;
       font-style: normal;
 
@@ -200,7 +243,7 @@ h2 {
    ========================================================================== */
 
 #prizes {
-  background-color: $brand-info;
+  background-color: $brand-warning;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
 
@@ -243,6 +286,18 @@ h2 {
 
 #second-cta-section {
   padding-top: $section-padding;
+
+  h2 {
+    font-size: 14.5vw;
+
+    @include breakpoint-sm {
+      font-size: 8.0vw;
+    }
+
+    @include breakpoint-md {
+      font-size: 7.3vw; 
+    }
+  }
 }
 
 #second-cta {

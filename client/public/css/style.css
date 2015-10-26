@@ -32,13 +32,28 @@ h2 {
     font-size: 4.1vw; } }
 
 .form-control {
-  border: 2px solid #FCB040; }
+  border: 2px solid #9DCDDE; }
 
 /* ==========================================================================
    Above the fold
    ========================================================================== */
 #above-the-fold {
   margin-bottom: 5vw; }
+  #above-the-fold h1 {
+    display: none; }
+  #above-the-fold h2 {
+    font-size: 12.5vw; }
+    @media (min-width: 768px) {
+      #above-the-fold h2 {
+        font-size: 6.5vw; } }
+    @media (min-width: 992px) {
+      #above-the-fold h2 {
+        font-size: 6.6vw; } }
+    @media (min-width: 1200px) {
+      #above-the-fold h2 {
+        font-size: 6.7vw; } }
+    #above-the-fold h2:first-child {
+      margin-top: 8vh; }
 
 #logo {
   max-width: 100%; }
@@ -49,6 +64,9 @@ h2 {
     #logo {
       margin-top: 6vh; } }
 
+#text-logo {
+  max-width: 100%; }
+
 #first-cta {
   margin-top: 6vh; }
 
@@ -56,7 +74,7 @@ h2 {
    Testimonials
    ========================================================================== */
 #testimonials {
-  background-color: #FF5B00;
+  background-color: #FC5C1F;
   padding-top: 8vh;
   padding-bottom: 8vh; }
   #testimonials h2 {
@@ -89,14 +107,17 @@ h2 {
    ========================================================================== */
 #donations h2 {
   font-size: 13vw;
-  color: #00C000;
+  color: #1CBE20;
   font-style: italic; }
   @media (min-width: 768px) {
     #donations h2 {
-      font-size: 6.5vw; } }
+      font-size: 11.5vw; } }
+  @media (min-width: 992px) {
+    #donations h2 {
+      font-size: 10.0vw; } }
 
 #donations p {
-  color: #E78B8E;
+  color: #000000;
   font-size: 20px; }
 
 #donations img {
@@ -114,7 +135,12 @@ h2 {
       margin-bottom: 15px;
       font-size: 4.0vw;
       margin-bottom: 0px;
-      font-style: normal; }
+      font-style: normal; } }
+    @media (min-width: 768px) and (min-width: 768px) {
+      #donations #charities {
+        font-size: 9.0vw; } }
+
+@media (min-width: 768px) {
       #donations #charities + p {
         margin-bottom: 15px;
         font-size: 15px; } }
@@ -123,7 +149,7 @@ h2 {
    Prizes
    ========================================================================== */
 #prizes {
-  background-color: #FCB040;
+  background-color: #F9AE4C;
   padding-top: 8vh;
   padding-bottom: 8vh; }
   #prizes h2 {
@@ -152,6 +178,14 @@ h2 {
    ========================================================================== */
 #second-cta-section {
   padding-top: 8vh; }
+  #second-cta-section h2 {
+    font-size: 14.5vw; }
+    @media (min-width: 768px) {
+      #second-cta-section h2 {
+        font-size: 8.0vw; } }
+    @media (min-width: 992px) {
+      #second-cta-section h2 {
+        font-size: 7.3vw; } }
 
 #second-cta {
   margin-top: 6vh;
