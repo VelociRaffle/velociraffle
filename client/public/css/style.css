@@ -131,6 +131,8 @@ h2 {
     padding-bottom: 8vh; }
     #donations #charities-section {
       margin-top: 5vw; }
+      #donations #charities-section a:hover {
+        color: white; }
     #donations #charities {
       margin-bottom: 15px;
       font-size: 4.0vw;
