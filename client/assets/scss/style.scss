@@ -320,3 +320,45 @@ h2 {
     font-size: 19px;
   }
 }
+
+
+
+
+/* ==========================================================================
+   Team page
+   ========================================================================== */
+
+#team-page {
+  #logo-header {
+    height: 85px;
+  }
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  p:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+#chris {
+  background-color: $brand-primary;
+  color: $white;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;  
+}
+
+#gerry {
+  background-color: $white;
+  color: $brand-danger;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;  
+}
+
+#charles {
+  background-color: $brand-warning;
+  color: $white;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;  
+}

@@ -36,6 +36,13 @@ app.get('/thank-you', function(req, res) {
   });
 });
 
+app.get('/team', function(req, res) {
+  res.render('static_pages/team/team', {
+    title: '',
+    env: process.env.NODE_ENV
+  });
+});
+
 mailerRoutes = require('./app/mailers/mailer.routes.js')(app, express);
 app.use('/email', mailerRoutes);
 

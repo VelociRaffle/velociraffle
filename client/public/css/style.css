@@ -202,3 +202,33 @@ h2 {
     #second-cta {
       padding: 18px 27px;
       font-size: 19px; } }
+
+/* ==========================================================================
+   Team page
+   ========================================================================== */
+#team-page #logo-header {
+  height: 85px; }
+
+#team-page h1 {
+  margin-bottom: 50px; }
+
+#team-page p:last-child {
+  margin-bottom: 0px; }
+
+#chris {
+  background-color: #FC5C1F;
+  color: white;
+  padding-top: 8vh;
+  padding-bottom: 8vh; }
+
+#gerry {
+  background-color: white;
+  color: #000000;
+  padding-top: 8vh;
+  padding-bottom: 8vh; }
+
+#charles {
+  background-color: #F9AE4C;
+  color: white;
+  padding-top: 8vh;
+  padding-bottom: 8vh; }
