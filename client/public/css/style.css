@@ -230,6 +230,24 @@ h2 {
     margin-top: 1.4vw; } }
 
 /* ==========================================================================
+   New subscriber page
+   ========================================================================== */
+#new-subscriber #above-the-fold h1 {
+  display: block;
+  font-size: 18.0vw; }
+
+#new-subscriber #above-the-fold h2 {
+  font-size: 12vw; }
+
+@media (min-width: 768px) {
+  #new-subscriber #above-the-fold h1 {
+    font-size: 9.2vw; }
+  #new-subscriber #above-the-fold h2 {
+    font-size: 6vw; }
+  #new-subscriber #above-the-fold h3 {
+    font-size: 3vw; } }
+
+/* ==========================================================================
    Team page
    ========================================================================== */
 #team-page #logo-header {
