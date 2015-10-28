@@ -251,13 +251,66 @@ h2 {
    Team page
    ========================================================================== */
 #team-page #logo-header {
-  height: 85px; }
+  height: 16vw; }
 
 #team-page h1 {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  font-size: 15vw; }
+
+#team-page h2 {
+  margin-top: 0px;
+  font-size: 9.8vw; }
+
+#team-page h3 {
+  font-size: 5.3vw;
+  margin-bottom: 20px; }
+
+#team-page h5 {
+  color: #000000;
+  font-size: 11vw; }
+
+#team-page h6 {
+  color: #000000;
+  font-size: 6.6vw;
+  padding-bottom: 30px; }
+
+#team-page p {
+  text-align: left; }
 
 #team-page p:last-child {
   margin-bottom: 0px; }
+
+#team-page #team-photos {
+  padding-bottom: 8vh; }
+  #team-page #team-photos img {
+    width: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px #FC5C1F solid; }
+  #team-page #team-photos .col-sm-4:last-child h6 {
+    padding-bottom: 0px; }
+
+#team-page .inline-text-only-logo {
+  height: 15px; }
+
+@media (min-width: 768px) {
+  #team-page #logo-header {
+    height: 10vw; }
+  #team-page h1 {
+    font-size: 8vw; }
+  #team-page h2 {
+    font-size: 4vw; }
+  #team-page h3 {
+    font-size: 2.2vw; }
+  #team-page h5 {
+    font-size: 2.8vw; }
+  #team-page h6 {
+    font-size: 1.6vw;
+    padding-bottom: 0px; }
+  #team-page #team-photos img {
+    width: 100%; } }
 
 #chris {
   background-color: #FC5C1F;

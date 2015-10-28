@@ -403,15 +403,92 @@ h2 {
 
 #team-page {
   #logo-header {
-    height: 85px;
+    height: 16vw;
   }
 
   h1 {
     margin-bottom: 50px;
+    font-size: 15vw;
+  }
+
+  h2 {
+    margin-top: 0px;
+    font-size: 9.8vw;
+  }
+
+  h3 {
+    font-size: 5.3vw;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    color: $brand-danger;
+    font-size: 11vw;
+  }
+
+  h6 {
+    color: $brand-danger;
+    font-size: 6.6vw;
+    padding-bottom: 30px;
+  }
+
+  p {
+    text-align: left;
   }
 
   p:last-child {
     margin-bottom: 0px;
+  }
+
+  #team-photos {
+    padding-bottom: $section-padding;
+
+    img {
+      width: 50%;
+      @include border-radius(50%);
+      border: 2px $brand-primary solid;
+    }
+
+    .col-sm-4:last-child h6 {
+      padding-bottom: 0px;
+    }
+  }
+
+  .inline-text-only-logo {
+    height: 15px;
+  }
+
+  @include breakpoint-sm {
+    #logo-header {
+      height: 10vw;
+    }
+
+    h1 {
+      font-size: 8vw;
+    }
+
+    h2 {
+      font-size: 4vw;
+    }
+
+    h3 {
+      font-size: 2.2vw;
+    }
+
+    h5 {
+      font-size: 2.8vw;
+    }
+
+    h6 {
+      font-size: 1.6vw;
+      padding-bottom: 0px;
+    }
+
+    #team-photos {
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 
