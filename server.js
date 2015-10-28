@@ -3,6 +3,7 @@ var express = require('express'),
   path      = require('path'),
   bodyParser = require('body-parser'),
   morgan    = require('morgan'),      // Easily log reqs
+  favicon   = require('serve-favicon'),
   config    = require('./config'),
   mailerRoutes;
 
@@ -16,6 +17,7 @@ app.use(morgan('dev'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs'); // use either jade or ejs 
 app.use(express.static(__dirname + '/client/public'));
+app.use(favicon(path.join(__dirname, 'client', 'public', 'img', 'favicon.ico')));
 
 app.get('/', function(req, res) {
   res.render('static_pages/home/home', {
