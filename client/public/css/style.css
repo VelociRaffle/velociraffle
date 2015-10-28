@@ -35,7 +35,7 @@ h2 {
     font-size: 4.1vw; } }
 
 .form-control {
-  border: 2px solid #9DCDDE; }
+  border: 2px solid #2D6F9A; }
 
 /* ==========================================================================
    Above the fold
@@ -202,6 +202,32 @@ h2 {
     #second-cta {
       padding: 18px 27px;
       font-size: 19px; } }
+
+/* ==========================================================================
+   Thank-you page
+   ========================================================================== */
+#thank-you #above-the-fold h1 {
+  display: block;
+  font-size: 14.0vw; }
+
+#thank-you #above-the-fold h2 {
+  font-size: 10vw; }
+
+#thank-you #above-the-fold #cta {
+  padding: 4vw 4.5vw;
+  font-size: 5vw;
+  margin-top: 4vw;
+  margin-bottom: 4vw; }
+
+@media (min-width: 768px) {
+  #thank-you #above-the-fold h1 {
+    font-size: 7.5vw; }
+  #thank-you #above-the-fold h2 {
+    font-size: 4vw; }
+  #thank-you #above-the-fold #cta {
+    padding: 1.5vw 1.4vw;
+    font-size: 2.2vw;
+    margin-top: 1.4vw; } }
 
 /* ==========================================================================
    Team page
