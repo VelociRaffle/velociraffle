@@ -26,13 +26,15 @@ app.get('/', function(req, res) {
 
 app.get('/new-subscriber', function(req, res) {
   res.render('static_pages/new-subscriber', {
-    title: 'New Subscriber'
+    title: 'New Subscriber',
+    env: process.env.NODE_ENV
   });
 });
 
 app.get('/thank-you', function(req, res) {
   res.render('static_pages/thank-you', {
-    title: 'Welcome'
+    title: 'Welcome',
+    env: process.env.NODE_ENV
   });
 });
 

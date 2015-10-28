@@ -4,23 +4,30 @@
 
 <body>
   <div class="container-fluid">
-    <div id="above-the-fold" class="row">
-      <div class="col-sm-6">
-        <img id="logo" src="/img/logo.png">
-      </div>
 
-      <div class="col-lg-6 col-lg-offset-0 col-sm-5 col-sm-offset-1 text-center">
-        <h1>
-          <span class="text-primary">Thank</span> <span class="text-info">You!</span>
-        </h1>
-        <h2>
-          <p class="text-danger">You're <span class="strong italic">almost</span> VelociReady.</p>
-        </h2>
-        <h3>
-          <p class="text-success">
-            To fully become a VelociRaffler, click the confirmation link in the email we just sent you.
-          </p>
-        </h3>
+    <% include ../shared/_bootstrap_grid_indicator.ejs %>
+
+    <div id="new-subscriber" class="row">
+      <div class="col-xs-12">
+        <div id="above-the-fold" class="row">
+          <div class="col-sm-6">
+            <img id="logo" src="/img/logo.png">
+          </div>
+
+          <div class="col-sm-6 text-center">
+            <h1 class="text-danger">
+              Thank You!
+            </h1>
+            <h2 class="text-danger">
+              You're
+              <span class="strong italic">almost</span>
+              <span class="text-warning">Veloci</span><span class="text-primary">Ready.</span>
+            </h2>
+            <h3 class="text-info">
+              To fully become a VelociRaffler, click the confirmation link in the email we just sent you.
+            </h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
