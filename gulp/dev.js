@@ -4,18 +4,36 @@ var gulp  = require('gulp'),
   concat  = require('gulp-concat'),
   uglify  = require('gulp-uglify'),
   rename  = require('gulp-rename'),
-  assetsPath = './client/assets',
-  publicPath = './client/public';
+  browserSync = require('browser-sync').create(),
+  config  = require('../config'),
+  assetsPath  = './client/assets',
+  jsPaths = assetsPath + '/js/**/*.js',
+  scssPaths   = assetsPath + '/scss/**/*.scss',
+  viewPaths   = './views/**/*.ejs',
+  publicPath  = './client/public';
+
 
 gulp.task('lint', function lint() {
-  return gulp.src(assetsPath + '/js/*.js')
+  return gulp.src(jsPaths)
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
 
+gulp.task('sass', function compileSass() {
+  return gulp.src(scssPaths)
+    .pipe(sass())
+    .pipe(gulp.dest(publicPath + '/css'))
+    .pipe(browserSync.stream());
+});
+
 gulp.task('watch', function watchForChanges() {
-  gulp.watch(assetsPath + '/js/*.js', ['lint', 'js-concat']);
-  gulp.watch(assetsPath + '/scss/*.scss', ['sass']);
+  browserSync.init({
+    proxy: 'http://localhost:' + config.port
+  });
+
+  gulp.watch(jsPaths, ['lint', 'js-concat']);
+  gulp.watch(scssPaths, ['sass']);
+  gulp.watch(viewPaths).on('change', browserSync.reload);
 });
 
 gulp.task('serve', ['lint', 'build', 'watch']);
