@@ -1,4 +1,5 @@
 @import "client/assets/scss/flatly/_variable_overrides.scss";
+@import "client/assets/scss/flatly/_variables.scss";
 
 /* ==========================================================================
    Home page variables & Mixins
@@ -417,18 +418,18 @@ h2 {
   }
 
   h3 {
-    font-size: 5.3vw;
+    font-size: 4.8vw;
     margin-bottom: 20px;
   }
 
   h5 {
-    color: $brand-danger;
+    color: $gray-darker;
     font-size: 11vw;
   }
 
   h6 {
-    color: $brand-danger;
-    font-size: 6.6vw;
+    color: $gray-dark;
+    font-size: 4.6vw;
     padding-bottom: 30px;
   }
 
@@ -445,6 +446,7 @@ h2 {
 
     img {
       width: 50%;
+      max-width: 300px;
       @include border-radius(50%);
       border: 2px $brand-primary solid;
     }
@@ -480,7 +482,7 @@ h2 {
     }
 
     h6 {
-      font-size: 1.6vw;
+      font-size: 1.4vw;
       padding-bottom: 0px;
     }
 
@@ -493,22 +495,34 @@ h2 {
 }
 
 #chris {
-  background-color: $brand-primary;
-  color: $white;
-  padding-top: $section-padding;
-  padding-bottom: $section-padding;  
-}
-
-#gerry {
-  background-color: $white;
-  color: $brand-danger;
-  padding-top: $section-padding;
-  padding-bottom: $section-padding;  
-}
-
-#charles {
   background-color: $brand-warning;
   color: $white;
   padding-top: $section-padding;
-  padding-bottom: $section-padding;  
+  padding-bottom: $section-padding;
+  
+  h2, h3 {
+    text-shadow: 1px 4px 2px rgba(0,0,0,.16);
+  }
+}
+
+#gerry {
+  background-color: $visor-green-dark;
+  color: $white;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+
+  h2, h3 {
+    text-shadow: 1px 4px 2px rgba(0,0,0,.16);
+  }
+}
+
+#charles {
+  background-color: $brand-info;
+  color: $white;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+
+  h2, h3 {
+    text-shadow: 1px 4px 2px rgba(0,0,0,.16);
+  }
 }
