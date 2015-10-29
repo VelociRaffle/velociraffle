@@ -57,4 +57,4 @@ app.get('*', function (req, res) {
 });
 
 app.listen(config.port);
-console.log('Server is running on: ' + config.port);
+console.log('Server is running on port: ' + config.port);
