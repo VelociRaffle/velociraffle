@@ -85,6 +85,12 @@ h2 {
     text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.16); }
   #how-it-works h3 {
     font-size: 45px; }
+  #how-it-works .col-xs-4:first-child {
+    padding-left: 0px;
+    padding-right: 30px; }
+  #how-it-works .col-xs-4:last-child {
+    padding-left: 30px;
+    padding-right: 0px; }
 
 /* ==========================================================================
    Testimonials

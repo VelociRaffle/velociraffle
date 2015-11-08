@@ -160,6 +160,18 @@ h2 {
   h3 {
     font-size: 45px;
   }
+
+  .col-xs-4 {
+    &:first-child {
+      padding-left: 0px;
+      padding-right: 30px;
+    }
+
+    &:last-child {
+      padding-left: 30px;
+      padding-right: 0px;
+    }
+  }
 }
 
 
