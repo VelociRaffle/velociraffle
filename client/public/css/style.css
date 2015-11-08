@@ -74,6 +74,19 @@ h2 {
   margin-top: 6vh; }
 
 /* ==========================================================================
+   How It Works
+   ========================================================================== */
+#how-it-works {
+  background-color: #F9AE4C;
+  color: white;
+  padding-top: 8vh;
+  padding-bottom: 8vh; }
+  #how-it-works h2 {
+    text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.16); }
+  #how-it-works h3 {
+    font-size: 45px; }
+
+/* ==========================================================================
    Testimonials
    ========================================================================== */
 #testimonials {
@@ -81,7 +94,8 @@ h2 {
   padding-top: 8vh;
   padding-bottom: 8vh; }
   #testimonials h2 {
-    color: white; }
+    color: white;
+    text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.16); }
 
 .testimonial h3 {
   color: white;
@@ -155,12 +169,13 @@ h2 {
    Prizes
    ========================================================================== */
 #prizes {
-  background-color: #F9AE4C;
+  background-color: #2D6F9A;
   padding-top: 8vh;
   padding-bottom: 8vh; }
   #prizes h2 {
     color: white;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.16); }
     #prizes h2 + p {
       margin-bottom: 4vh;
       color: white; }
