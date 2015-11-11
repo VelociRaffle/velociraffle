@@ -66,6 +66,13 @@ body {
   height: 30px;
 }
 
+a {
+  color: $ticket-dark-blue;
+
+  &:hover {
+    color: white;
+  }
+}
 
 /* ==========================================================================
    Bootstrap Overwrites
