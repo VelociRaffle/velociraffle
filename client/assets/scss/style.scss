@@ -138,8 +138,41 @@ h2 {
   max-width: 100%;
 }
 
-#first-cta {
+
+/* ==========================================================================
+   Call to Action
+   ========================================================================== */
+
+.cta {
   margin-top: 6vh;
+
+  .want-in-text {
+    display: block;
+    font-size: 26px;
+    @media (min-width: 500px) {
+      display: inline;
+    }
+    @include breakpoint-sm {
+      font-size: 20px;
+    }
+
+    @include breakpoint-md {
+      font-size: 2.5vw;
+    }
+  }
+
+  img {
+    height: 26px;
+
+    @include breakpoint-sm {
+      height: 20px;
+    }
+
+    @include breakpoint-md {
+      margin-bottom: 1.1vw;
+      height: 2.5vw;
+    }
+  }
 }
 
 
