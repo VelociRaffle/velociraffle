@@ -247,14 +247,7 @@ h2 {
         font-size: 7.3vw; } }
 
 #second-cta {
-  margin-top: 6vh;
-  margin-bottom: 3vh;
-  padding: 10px 15px;
-  font-size: 15px; }
-  @media (min-width: 768px) {
-    #second-cta {
-      padding: 18px 27px;
-      font-size: 19px; } }
+  margin-bottom: 3vh; }
 
 /* ==========================================================================
    Thank-you page
