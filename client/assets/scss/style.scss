@@ -67,10 +67,11 @@ body {
 }
 
 a {
-  color: $ticket-dark-blue;
+  color: $brand-primary;
 
   &:hover {
     color: white;
+    text-decoration: none;
   }
 }
 
@@ -211,6 +212,10 @@ h2 {
       padding-left: 30px;
       padding-right: 0px;
     }
+  }
+
+  p {
+    font-size: 20px;
   }
 }
 

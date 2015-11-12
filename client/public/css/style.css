@@ -23,9 +23,10 @@ body {
   height: 30px; }
 
 a {
-  color: #2D6F9A; }
+  color: #FC5C1F; }
   a:hover {
-    color: white; }
+    color: white;
+    text-decoration: none; }
 
 /* ==========================================================================
    Bootstrap Overwrites
@@ -120,6 +121,8 @@ h2 {
   #how-it-works .col-xs-4:last-child {
     padding-left: 30px;
     padding-right: 0px; }
+  #how-it-works p {
+    font-size: 20px; }
 
 /* ==========================================================================
    Testimonials
