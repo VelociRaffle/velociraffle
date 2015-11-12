@@ -161,47 +161,44 @@ h2 {
 /* ==========================================================================
    Donations
    ========================================================================== */
-#donations h2 {
-  font-size: 13vw;
-  color: #1CBE20;
-  font-style: italic; }
+#donations {
+  background-color: #1CBE20; }
+  #donations h2 {
+    font-size: 13vw;
+    color: white;
+    font-style: italic;
+    text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.16); }
+    @media (min-width: 768px) {
+      #donations h2 {
+        font-size: 11.5vw; } }
+    @media (min-width: 992px) {
+      #donations h2 {
+        font-size: 10.0vw; } }
+  #donations p {
+    color: white;
+    font-size: 20px; }
+  #donations img {
+    max-height: 100px; }
+    #donations img + img {
+      margin-left: 20px; }
   @media (min-width: 768px) {
-    #donations h2 {
-      font-size: 11.5vw; } }
-  @media (min-width: 992px) {
-    #donations h2 {
-      font-size: 10.0vw; } }
-
-#donations p {
-  color: #000000;
-  font-size: 20px; }
-
-#donations img {
-  max-height: 100px; }
-  #donations img + img {
-    margin-left: 20px; }
-
-@media (min-width: 768px) {
-  #donations {
-    padding-top: 8vh;
-    padding-bottom: 8vh; }
-    #donations #charities-section {
-      margin-top: 5vw; }
-      #donations #charities-section a:hover {
-        color: white; }
-    #donations #charities {
-      margin-bottom: 15px;
-      font-size: 4.0vw;
-      margin-bottom: 0px;
-      font-style: normal; } }
+    #donations {
+      padding-top: 8vh;
+      padding-bottom: 8vh; }
+      #donations #charities-section {
+        margin-top: 5vw; }
+      #donations #charities {
+        margin-bottom: 15px;
+        font-size: 4.0vw;
+        margin-bottom: 0px;
+        font-style: normal; } }
     @media (min-width: 768px) and (min-width: 768px) {
       #donations #charities {
         font-size: 9.0vw; } }
-
-@media (min-width: 768px) {
-      #donations #charities + p {
-        margin-bottom: 15px;
-        font-size: 15px; } }
+  @media (min-width: 768px) {
+        #donations #charities + p {
+          margin-bottom: 15px;
+          font-size: 15px; } }
 
 /* ==========================================================================
    Prizes

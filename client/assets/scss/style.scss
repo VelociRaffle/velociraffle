@@ -268,10 +268,13 @@ h2 {
    ========================================================================== */
 
 #donations {
+  background-color: $brand-success;
+
   h2 {
     font-size: 13vw;
-    color: $brand-success;
+    color: $white;
     font-style: italic;
+    text-shadow: 1px 4px 2px rgba(0,0,0,.16);
 
     @include breakpoint-sm {
       font-size: 11.5vw;
@@ -283,7 +286,7 @@ h2 {
   }
 
   p {
-   color: $brand-danger;
+   color: $white;
    font-size: 20px;
   }
 
@@ -301,10 +304,6 @@ h2 {
 
     #charities-section {
       margin-top: 5vw;
-
-      a:hover {
-        color: white;
-      }
     }
 
     #charities {
