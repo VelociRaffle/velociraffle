@@ -230,6 +230,21 @@ h2 {
     color: black; }
 
 /* ==========================================================================
+   Prizes
+   ========================================================================== */
+#vip {
+  background-color: #F9AE4C;
+  color: white;
+  padding-top: 8vh;
+  padding-bottom: 8vh; }
+  #vip h2 {
+    margin-top: 0px;
+    text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.16); }
+  #vip p {
+    text-align: justify;
+    margin-bottom: 0px; }
+
+/* ==========================================================================
    Second call-to-action
    ========================================================================== */
 #second-cta-section {

@@ -371,6 +371,31 @@ h2 {
 
 
 /* ==========================================================================
+   Prizes
+   ========================================================================== */
+
+#vip {
+  background-color: $brand-warning;
+  color: $white;
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+
+  h2 {
+    margin-top: 0px;
+    text-shadow: 1px 4px 2px rgba(0,0,0,.16);
+  }
+
+  h3 {
+    
+  }
+
+  p {
+    text-align: justify;
+    margin-bottom: 0px;
+  }
+}
+
+/* ==========================================================================
    Second call-to-action
    ========================================================================== */
 
