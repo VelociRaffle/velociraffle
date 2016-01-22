@@ -314,7 +314,6 @@ h2 {
         font-size: 9.0vw;
       }
 
-      margin-bottom: 0px;
       font-style: normal;
 
       & + p {
@@ -322,6 +321,8 @@ h2 {
         font-size: 15px;
       }
     }
+
+
   }
 }
 
@@ -337,7 +338,7 @@ h2 {
 
   h2 {
     color: $white;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
 
     text-shadow: 1px 4px 2px rgba(0,0,0,.16);
 
