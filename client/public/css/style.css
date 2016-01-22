@@ -63,6 +63,8 @@ h2 {
         font-size: 6.7vw; } }
     #above-the-fold h2:first-child {
       margin-top: 8vh; }
+  #above-the-fold h4 {
+    font-size: 40px; }
 
 #logo {
   max-width: 100%; }
